@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f94dcd2-4c4c-452b-ab53-1c7f87630472" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/examples/OR3/OR3_NoMod_truth_table.log" beforeDir="false" afterPath="$PROJECT_DIR$/examples/OR3/OR3_NoMod_truth_table.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbMap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inputPermuter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputPermuter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/randomizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/randomizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sim.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sim_example.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.sqd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/truth_table_log_test.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/wrapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,14 +54,23 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wrapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="80" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="1015">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#1015#1030#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -105,16 +107,7 @@
         <option value="$PROJECT_DIR$/src/randomizer.py" />
         <option value="$PROJECT_DIR$/src/sim.py" />
         <option value="$PROJECT_DIR$/src/wrapper.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/gateFinder.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -136,16 +129,6 @@
               <item name="gateFinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="gateFinder" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="gateFinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gateFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gateFinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gateFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -154,7 +137,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sidb_Validator" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -246,19 +230,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbMap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logger.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/randomizer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -289,13 +260,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DESIGN_NAME_truth_table.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbMap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logger.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="1015">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#1015#1030#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
