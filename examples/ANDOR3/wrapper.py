@@ -4,7 +4,7 @@
 #      Framework to facilitate edition and testing of SiDB circuits         #
 #                                                                           #
 # Authors: Arthur Fortini and Gustavo Guedes                                #
-# File: wrapper.py                                                          #
+# File: gatefinder.py                                                          #
 # Description: Top level file to address user modifications in a base       #
 #              SiDB file and facilitate simulation and anaylis of results.  #
 #              Please note that some parts should be edited by user and     #

@@ -4,7 +4,7 @@
 #      Framework to facilitate edition and testing of SiDB circuits         #
 #                                                                           #
 # Authors: Arthur Fortini and Gustavo Guedes                                #
-# File: wrapper.py                                                          #
+# File: gatefinder.py                                                          #
 # Description: Top level file to address user modifications in a base       #
 #              SiDB file and facilitate simulation and anaylis of results.  #
 #              Please note that some parts should be edited by user and     #
@@ -29,7 +29,7 @@ import sys
 # also a src directory containing dbMap.py, inputPermuter.py e randomizer.Py
 # should be present.
 
-# sys.path.append("../../src/")    #include source code directory
+# sys.path.append("../../src/")    #include source code directory. This should be uncommented in your working directory
 import logger
 from pysimanneal import simanneal
 from dbMap import Design, DBDot
