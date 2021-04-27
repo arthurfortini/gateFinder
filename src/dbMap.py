@@ -1,11 +1,7 @@
-import argparse
-import os
 import xml.etree.ElementTree as ET
 import logger
 import copy
 import math
-from random import seed
-from random import randint
 
 def create_logger ():
     build_logger = logger.Logger()

@@ -4,7 +4,7 @@
 #      Framework to facilitate edition and testing of SiDB circuits         #
 #                                                                           #
 # Authors: Arthur Fortini and Gustavo Guedes                                #
-# File: gatefinder.py                                                          #
+# File: gatefinder.py                                                       #
 # Description: Top level file to address user modifications in a base       #
 #              SiDB file and facilitate simulation and anaylis of results.  #
 #              Please note that some parts should be edited by user and     #
@@ -14,13 +14,7 @@
 
 import argparse
 import os
-import xml.etree.ElementTree as ET
-import copy
-import math
 from random import seed
-from random import randint
-import re
-from datetime import datetime
 import sys
 
 # this imports assumes that a pysimanneal directory containing __init__.py,

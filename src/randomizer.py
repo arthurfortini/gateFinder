@@ -1,10 +1,5 @@
 from dbMap import Design, DBDot
-import argparse
-import os
-import xml.etree.ElementTree as ET
 import logger
-from random import seed
-from random import randint
 
 def create_logger():
     build_logger = logger.Logger()
