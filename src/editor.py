@@ -8,7 +8,7 @@ def create_logger():
 
 log = create_logger()
 
-class Randomizer ():
+class Editor ():
     def __init__(self, designObj) -> None:
         self.design = designObj
         # self.design = dbMap.Design(designFile)
@@ -279,7 +279,7 @@ class Randomizer ():
 
 # def test():
 #     design = Design(args.design)
-#     randomizer = Randomizer(design)
+#     randomizer = Editor(design)
 #
 #     #randomizer.modifySpecificDBbyID(0, 2, "x")
 #     randomizer.modifySpecificDB(randomizer.inPerturber[0], -5, "x")

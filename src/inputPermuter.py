@@ -1,5 +1,5 @@
 from dbMap import Design, DBDot
-from randomizer import Randomizer
+from editor import Editor
 import os
 import logger
 import shutil
@@ -175,7 +175,7 @@ class Permuter ():
 
 # def test():
 #     design = Design(args.design)
-#     randomizer = Randomizer(design)
+#     randomizer = Editor(design)
 #     inputpermuter = Permuter(design)
 #     designDbs = randomizer.design.getDBDots()
 #     print("Inputs: " + str(randomizer.inputs))

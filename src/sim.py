@@ -5,7 +5,7 @@ from datetime import datetime
 import logger
 from pysimanneal import simanneal
 from dbMap import Design, DBDot
-from randomizer import Randomizer
+from editor import Editor
 from inputPermuter import Permuter
 
 def create_logger ():
@@ -84,26 +84,26 @@ def sim(design, design_name, number_of_inputs, sim_mu, ext_potential_vector):
         path = os.path.join(directory, sim_dir)
         os.chdir(path)
         design = Design(sim_dir + ".xml")
-        randomizer = Randomizer(design)
+        editor = Editor(design)
         db_pos = []
 
-        for i, DBDot in enumerate(randomizer.inputs):
+        for i, DBDot in enumerate(editor.inputs):
             (n, m, l) = DBDot.latcoord
             db_pos.append([int(n), int(m), int(l)])
 
-        for i, DBDot in enumerate(randomizer.std):
+        for i, DBDot in enumerate(editor.std):
             (n, m, l) = DBDot.latcoord
             db_pos.append([int(n), int(m), int(l)])
 
-        for i, DBDot in enumerate(randomizer.inPerturber):
+        for i, DBDot in enumerate(editor.inPerturber):
             (n, m, l) = DBDot.latcoord
             db_pos.append([int(n), int(m), int(l)])
 
-        for i, DBDot in enumerate(randomizer.outPerturber):
+        for i, DBDot in enumerate(editor.outPerturber):
             (n, m, l) = DBDot.latcoord
             db_pos.append([int(n), int(m), int(l)])
 
-        for i, DBDot in enumerate(randomizer.outputs):
+        for i, DBDot in enumerate(editor.outputs):
             (n, m, l) = DBDot.latcoord
             db_pos.append([int(n), int(m), int(l)])
 

@@ -27,7 +27,7 @@ sys.path.append("../../src/")    #include source code directory. This should be 
 import logger
 from pysimanneal import simanneal
 from dbMap import Design, DBDot
-from randomizer import Randomizer
+from editor import Editor
 from inputPermuter import Permuter
 from sim import sim
 
@@ -82,7 +82,7 @@ design.overwriteDBDots()
 
 # In this flow, we need to create randomizer and inputPermuter after definition of design DBs
 
-randomizer = Randomizer(design)
+editor = Editor(design)
 inputpermuter = Permuter(design)
 
 ##      PLEASE DO NOT EDIT BELOW THIS LINE. THIS PIECE OF CODE IS DESTINED TO AUTOMATICALLY     ##

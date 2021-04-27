@@ -26,7 +26,7 @@ from random import seed
 import logger
 from pysimanneal import simanneal
 from dbMap import Design, DBDot
-from randomizer import Randomizer
+from editor import Editor
 from inputPermuter import Permuter
 from sim import sim
 
@@ -61,7 +61,7 @@ ext_potential_vector = None
 
 #   Creation of design, randomizer and inputPermuter is necessary for design edition and sim automation
 design = Design(args.design)
-randomizer = Randomizer(design)
+editor = Editor(design)
 
 ##      Design Modifications        ##
 
