@@ -1,0 +1,161 @@
+05-03 14:43 gatefinder.toplevel INFO     Setting up logger for gateFinder application...
+05-03 14:43 gatefinder.dbMap.Design INFO     creating an instance of Design
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 layer_id from 2 to 2
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 latcoord from ('-1', '-3', '0') to (-4, -3, 1)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 physloc from ('-3.84', '-23.04') to (-15.36, -9.27)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 color from #ffffff00 to #ff00ff00
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 layer_id from 2 to 2
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 latcoord from ('-4', '-3', '1') to (-4, 2, 1)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 physloc from ('-15.36', '-9.27') to (-15.36, 9.93)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 color from #ff00ff00 to #ff00ff00
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 layer_id from 2 to 2
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 latcoord from ('-4', '2', '1') to (-4, -2, 1)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 physloc from ('-15.36', '9.93') to (-15.36, -5.43)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 color from #ff00ff00 to #ffc8c8c8
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 layer_id from 2 to 2
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 latcoord from ('-4', '-2', '1') to (-4, 1, 1)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 physloc from ('-15.36', '-5.43') to (-15.36, 6.09)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 color from #ffc8c8c8 to #ffc8c8c8
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 layer_id from 2 to 2
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 latcoord from ('-4', '1', '1') to (4, 0, 0)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 physloc from ('-15.36', '6.09') to (15.36, 0.0)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 color from #ffc8c8c8 to #ffc8c8c8
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 layer_id from 2 to 2
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 latcoord from ('4', '0', '0') to (6, 0, 0)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 physloc from ('15.36', '0.0') to (23.04, 0.0)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 color from #ffc8c8c8 to #ffc8c8c8
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 layer_id from 2 to 2
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 latcoord from ('6', '0', '0') to (11, 0, 0)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 physloc from ('23.04', '0.0') to (42.239999999999995, 0.0)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 color from #ffc8c8c8 to #ffc8c8c8
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 layer_id from 2 to 2
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 latcoord from ('11', '0', '0') to (13, 0, 0)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 physloc from ('42.239999999999995', '0.0') to (49.92, 0.0)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 color from #ffc8c8c8 to #ffff0000
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 layer_id from 2 to 2
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 latcoord from ('13', '0', '0') to (18, 0, 0)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 physloc from ('49.92', '0.0') to (69.12, 0.0)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 color from #ffff0000 to #ff0000ff
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 layer_id from 2 to 2
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 latcoord from ('18', '0', '0') to (-4, -5, 1)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 physloc from ('69.12', '0.0') to (-15.36, -16.95)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 color from #ff0000ff to #ffffff00
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 layer_id from 2 to 2
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 latcoord from ('-4', '-5', '1') to (-4, 4, 0)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 physloc from ('-15.36', '-16.95') to (-15.36, 15.36)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 color from #ffffff00 to #ffffff00
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.editor.Editor INFO     creating an instance of Editor
+05-03 14:43 gatefinder.inputPermuter.Permuter INFO     creating an instance of Permuter
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 layer_id from 2 to 2
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 latcoord from ('18', '0', '0') to (-4, 4, 0)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 physloc from ('69.12', '0.0') to (-15.36, 15.36)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 color from #ff0000ff to #ffffff00
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 layer_id from 2 to 2
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 latcoord from ('18', '0', '0') to (-4, -5, 1)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 physloc from ('69.12', '0.0') to (-15.36, -16.95)
+05-03 14:43 gatefinder.dbMap.DBDot DEBUG    Changing DB #1 color from #ff0000ff to #ffffff00
+05-03 14:43 gatefinder.dbMap.Design INFO     creating an instance of Design
+05-03 14:43 gatefinder.editor.Editor INFO     creating an instance of Editor
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.Design INFO     creating an instance of Design
+05-03 14:43 gatefinder.editor.Editor INFO     creating an instance of Editor
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.Design INFO     creating an instance of Design
+05-03 14:43 gatefinder.editor.Editor INFO     creating an instance of Editor
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.Design INFO     creating an instance of Design
+05-03 14:43 gatefinder.editor.Editor INFO     creating an instance of Editor
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
+05-03 14:43 gatefinder.dbMap.DBDot INFO     creating an instance of DBDot
