@@ -23,20 +23,14 @@ import sys
 # also a src directory containing dbMap.py, inputPermuter.py e randomizer.Py
 # should be present.
 
-sys.path.append("../../src/")    #include source code directory. This should be uncommented in your working directory
+# sys.path.append("../../src/")    #include source code directory. This should be uncommented in your working directory
 import logger
-from pysimanneal import simanneal
+import logging
 from dbMap import Design, DBDot
 from editor import Editor
-from inputPermuter import Permuter
 from sim import sim
 
 seed(1)
-
-def create_logger ():
-    build_logger = logger.Logger()
-    build_logger.set_error()
-    return build_logger
 
 def arg_parser():
     parser = argparse.ArgumentParser(description='Design randomizer script.')
@@ -46,9 +40,11 @@ def arg_parser():
 
 def arg_check():
     if not os.path.isfile(args.design):
-        log.error(f"Could not find design file {args.design}")
+        loggerTop.error(f"Could not find design file {args.design}")
 
-log = create_logger()
+logger.setup_logging()
+loggerTop = logging.getLogger('gatefinder.toplevel')
+loggerTop.info('Setting up logger for gateFinder application...')
 args = arg_parser()
 arg_check()
 
@@ -73,20 +69,18 @@ designDBs = design.getDBDots()
 
 
 
-##      DO NOT EDIT BELOW THIS LINE     ##
+##      PLEASE DO NOT EDIT BELOW THIS LINE. THIS PIECE OF CODE IS DESTINED TO AUTOMATICALLY     ##
+##      HANDLE THE MODIFIED VERSION OF DESIGN AND GENERATE THE CORRECT SIMS AND OUTPUTS         ##
 
 design.overwriteDBDots()
 designDBs = design.getDBDots()
 design.removeDBDot(designDBs[0].dbAttribs)   #removing stub DB
 design.overwriteDBDots()
 
-# In this flow, we need to create randomizer and inputPermuter after definition of design DBs
+# In this flow, we need to create randomizer after definition of design DBs
 
 editor = Editor(design)
-inputpermuter = Permuter(design)
 
-##      PLEASE DO NOT EDIT BELOW THIS LINE. THIS PIECE OF CODE IS DESTINED TO AUTOMATICALLY     ##
-##      HANDLE THE MODIFIED VERSION OF DESIGN AND GENERATE THE CORRECT SIMS AND OUTPUTS         ##
 sim(design, design_name, number_of_inputs, sim_mu, ext_potential_vector)
 
 

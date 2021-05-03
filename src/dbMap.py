@@ -1,17 +1,15 @@
 import xml.etree.ElementTree as ET
 import logger
+import logging
 import copy
 import math
 
-def create_logger ():
-    build_logger = logger.Logger()
-    build_logger.set_error()
-    return build_logger
-
-log = create_logger()
+module_logger = logging.getLogger('gatefinder.dbMap')
 
 class DBDot ():
     def __init__(self, dbAttribs, id=0) -> None:
+        self.logger = logging.getLogger('gatefinder.dbMap.DBDot')
+        self.logger.info('creating an instance of DBDot')
         self.dbAttribs = dbAttribs
         self.id = id
         for attr in self.dbAttribs:
@@ -24,10 +22,10 @@ class DBDot ():
             elif attr.tag == "color":
                 self.color = (attr.text)
             else:
-                log.error(f"Unknown key: {attr.tag}")
+                self.logger.error(f"Unknown key: {attr.tag}")
 
     def changeLayerId(self, newLayerId):
-        log.debug(f"Changing DB #{self.id} layer_id from {self.layer_id} to {newLayerId}")
+        self.logger.debug(f"Changing DB #{self.id} layer_id from {self.layer_id} to {newLayerId}")
         self.layer_id = newLayerId
         for attr in self.dbAttribs:
             if attr.tag == "layer_id":
@@ -38,7 +36,7 @@ class DBDot ():
             latcoord = (newLatcoord, m, l)
         else:
             latcoord = newLatcoord
-        log.debug(f"Changing DB #{self.id} latcoord from {self.latcoord} to {latcoord}")
+        self.logger.debug(f"Changing DB #{self.id} latcoord from {self.latcoord} to {latcoord}")
         self.latcoord = latcoord
         (n, m, l) = latcoord
         for attr in self.dbAttribs:
@@ -50,7 +48,7 @@ class DBDot ():
     def changePhysloc(self, newPhysloc, y=None):
         if y is not None:
             newPhysloc = (newPhysloc, y)
-        log.debug(f"Changing DB #{self.id} physloc from {self.physloc} to {newPhysloc}")
+        self.logger.debug(f"Changing DB #{self.id} physloc from {self.physloc} to {newPhysloc}")
         self.physloc = newPhysloc
         (x,y) = newPhysloc
         for attr in self.dbAttribs:
@@ -59,7 +57,7 @@ class DBDot ():
                 attr.set("y", str(y))
 
     def changeColor(self, newColor):
-        log.debug(f"Changing DB #{self.id} color from {self.color} to {newColor}")
+        self.logger.debug(f"Changing DB #{self.id} color from {self.color} to {newColor}")
         self.color = newColor
         for attr in self.dbAttribs:
             if attr.tag == "color":
@@ -78,6 +76,8 @@ class DBDot ():
 
 class Design ():
     def __init__(self, designFile) -> None:
+        self.logger = logging.getLogger('gatefinder.dbMap.Design')
+        self.logger.info('creating an instance of Design')
         self.designFilePath = designFile
         self.designParseTree = ET.parse(self.designFilePath)
         self.dbDots = []
@@ -155,7 +155,7 @@ class Design ():
             else:
                 targetDb = (dbattrs, latcoord, physloc, color)
         except:
-            log.error("Please pass db dot information as a tuple (layer_id, latcoord, physloc, color)")
+            self.logger.error("Please pass db dot information as a tuple (layer_id, latcoord, physloc, color)")
         found = 0
         sqdRoot = self.designParseTree.getroot()
         designTag = sqdRoot.find("design")
@@ -169,9 +169,9 @@ class Design ():
                                 found+=1
                         layer.remove(db)
         if (found == 0):
-            log.warning(f"Could not find the following db in the design:\n\t({targetDb})")
+            self.logger.warning(f"Could not find the following db in the design:\n\t({targetDb})")
         elif (found > 1):
-            log.error(f"More than one db matched db to be removed:\n\t({targetDb})")
+            self.logger.error(f"More than one db matched db to be removed:\n\t({targetDb})")
 
         self.overwriteDBDots()
 

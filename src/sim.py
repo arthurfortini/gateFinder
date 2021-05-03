@@ -3,17 +3,13 @@ import re
 from datetime import datetime
 
 import logger
+import logging
 from pysimanneal import simanneal
 from dbMap import Design, DBDot
 from editor import Editor
 from inputPermuter import Permuter
 
-def create_logger ():
-    build_logger = logger.Logger()
-    build_logger.set_error()
-    return build_logger
-
-log = create_logger()
+module_logger = logging.getLogger('gatefinder.sim')
 
 def sim(design, design_name, number_of_inputs, sim_mu, ext_potential_vector):
     inputpermuter = Permuter(design)
@@ -41,7 +37,7 @@ def sim(design, design_name, number_of_inputs, sim_mu, ext_potential_vector):
     elif (number_of_inputs == 3):
         inputpermuter.permute3inputs(design_name)
     else:
-        log.error(f"Number of inputs {number_of_inputs} not supported\n")
+        module_logger.error(f"Number of inputs {number_of_inputs} not supported\n")
 
     tt_log = open(design_name + "_truth_table.log", "w")  # creates log for truth table
 
@@ -71,7 +67,7 @@ def sim(design, design_name, number_of_inputs, sim_mu, ext_potential_vector):
         input_table.append("IN0     IN1     IN2\n")
         input_table.append("--------------------\n")
     else:
-        log.error(f"Number of inputs {number_of_inputs} not supported\n")
+        module_logger.error(f"Number of inputs {number_of_inputs} not supported\n")
 
     tt_log.writelines(input_table)
 

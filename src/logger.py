@@ -1,36 +1,18 @@
 import logging
 
-class Logger ():
-    def __init__ (self):
-        self.log_format = "%(asctime)s - %(levelname)s: %(message)s"
-        self.date_format = '%d-%m-%Y %H:%M:%S'
-        self.logger = logging.getLogger(__name__)
-
-    def set_debug(self):
-        logging.basicConfig(level=logging.DEBUG, format=self.log_format, datefmt=self.date_format)
-
-    def set_info(self):
-        logging.basicConfig(level=logging.INFO, format=self.log_format, datefmt=self.date_format)
-
-    def set_warning(self):
-        logging.basicConfig(level=logging.WARNING, format=self.log_format, datefmt=self.date_format)
-
-    def set_error(self):
-        logging.basicConfig(level=logging.ERROR, format=self.log_format, datefmt=self.date_format)
-
-    def error(self, msg):
-        logging.error(msg)
-    
-    def debug(self, msg):
-        logging.debug(msg)
-
-    def info(self, msg):
-        logging.info(msg)
-
-    def warning(self, msg):
-        logging.warning(msg)
-
-if __name__ == "__main__":
-    my_logger = Logger()
-    my_logger.set_debug()
-    my_logger.debug ('ohno')
+def setup_logging():
+    # set up logging to file - see previous section for more details
+    logging.basicConfig(level=logging.DEBUG,
+                        format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
+                        datefmt='%m-%d %H:%M',
+                        filename='gateFinder.log',
+                        filemode='w')
+    # define a Handler which writes INFO messages or higher to the sys.stderr
+    console = logging.StreamHandler()
+    console.setLevel(logging.INFO)
+    # set a format which is simpler for console use
+    formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
+    # tell the handler to use this format
+    console.setFormatter(formatter)
+    # add the handler to the root logger
+    logging.getLogger('').addHandler(console)

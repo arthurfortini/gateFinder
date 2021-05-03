@@ -1,15 +1,13 @@
 from dbMap import Design, DBDot
 import logger
+import logging
 
-def create_logger():
-    build_logger = logger.Logger()
-    build_logger.set_error()
-    return build_logger
-
-log = create_logger()
+module_logger = logging.getLogger('gatefinder.editor')
 
 class Editor ():
     def __init__(self, designObj) -> None:
+        self.logger = logging.getLogger('gatefinder.editor.Editor')
+        self.logger.info('creating an instance of Editor')
         self.design = designObj
         # self.design = dbMap.Design(designFile)
         self.inputs = []
@@ -80,7 +78,7 @@ class Editor ():
                     (n, m, l) = DBDot.latcoord
                     self.changeYcoord(DBDot, distance, int(n), int(m), int(l))
             else:
-                log.error(f" modifySpecificDB: id of DB not found\n")
+                self.logger.error('modifySpecificDB: id of DB not found')
 
     def modifySpecificDB(self, DBDot, distance, axis):
         if axis == "x":
@@ -121,9 +119,9 @@ class Editor ():
                     (n, m, l) = dir.latcoord
                     self.changeYcoord(dir, distance, int(n), int(m), int(l))
         elif type == None:
-            log.error(f"modifyPositions method called without specifying TYPE of position modification\n")
+            self.logger.error('modifyPositions method called without specifying TYPE of position modification')
         else:
-            log.error(f"modifyPositions method called with invalid TYPE of position modification\n")
+            self.logger.error('modifyPositions method called with invalid TYPE of position modification')
 
     def modifyAngle(self, dbPair, angle):
         dbRoot = dbPair[0]
@@ -267,7 +265,7 @@ class Editor ():
                 newnL = nR - abs(mL - mR) -1
                 self.changecoord(dbLeaf, newnL, mR, lR)
         else:
-            log.error(f" modifyAngle: angle argument invalid!\n")
+            self.logger.error('modifyAngle: angle argument invalid!')
     # else:
     #     log.error(f"modifyAngle: position of root db in pair inconsistent. l can only be 0 or 1\n")
 

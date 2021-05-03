@@ -15,6 +15,7 @@
 import argparse
 import os
 from random import seed
+import sys
 
 # this imports assumes that a pysimanneal directory containing __init__.py,
 # simanneal.py, and the compiled simanneal library (_simanneal.so for Linux or
@@ -24,30 +25,26 @@ from random import seed
 
 # sys.path.append("../../src/")    #include source code directory. This should be uncommented in your working directory
 import logger
-from pysimanneal import simanneal
+import logging
 from dbMap import Design, DBDot
 from editor import Editor
-from inputPermuter import Permuter
 from sim import sim
 
 seed(1)
 
-def create_logger ():
-    build_logger = logger.Logger()
-    build_logger.set_error()
-    return build_logger
-
 def arg_parser():
-    parser = argparse.ArgumentParser(description='Design randomizer script.')
-    parser.add_argument('design', help='Design to be randomized', type=str)
+    parser = argparse.ArgumentParser(description='GateFinder Framework top level script.')
+    parser.add_argument('design', help='Design to be modified or simulated', type=str)
     args = parser.parse_args()
     return args
 
 def arg_check():
     if not os.path.isfile(args.design):
-        log.error(f"Could not find design file {args.design}")
+        loggerTop.error(f"Could not find design file {args.design}")
 
-log = create_logger()
+logger.setup_logging()
+loggerTop = logging.getLogger('gatefinder.toplevel')
+loggerTop.info('Setting up logger for gateFinder application...')
 args = arg_parser()
 arg_check()
 

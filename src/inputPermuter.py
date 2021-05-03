@@ -2,17 +2,15 @@ from dbMap import Design, DBDot
 from editor import Editor
 import os
 import logger
+import logging
 import shutil
 
-def create_logger():
-    build_logger = logger.Logger()
-    build_logger.set_error()
-    return build_logger
-
-log = create_logger()
+module_logger = logging.getLogger('gatefinder.inputPermuter')
 
 class Permuter ():
     def __init__(self, designObj) -> None:
+        self.logger = logging.getLogger('gatefinder.inputPermuter.Permuter')
+        self.logger.info('creating an instance of Permuter')
         self.design = designObj
         self.inputs = []
         self.outputs = []
