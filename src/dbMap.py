@@ -175,6 +175,10 @@ class Design ():
 
         self.overwriteDBDots()
 
+    def removeMostRecentDBDot(self):
+        self.dbDots.remove(self.dbDots[-1])
+        self.logger.warning(f"Removing most recently added DBDot:\n\t({self.dbDots[-1]})")
+
     def save(self, fileName):
         self.designParseTree.write(fileName)
 
