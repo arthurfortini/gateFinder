@@ -15,6 +15,7 @@ class Editor ():
         self.std = []
         self.inPerturber = []
         self.outPerturber = []
+        self.isolatedDB = []
         self.mapPorts()
 
     def mapPorts(self):
@@ -31,6 +32,9 @@ class Editor ():
                 self.std.append(DBDot)
             elif (portType == "inPerturber"):
                 self.inPerturber.append(DBDot)
+            elif (portType == "isolatedDB"):
+                self.logger.debug('isolatedDB IDENTIFIED')
+                self.isolatedDB.append(DBDot)
             else:
             # elif (portType == "perturber"):
                 self.outPerturber.append(DBDot)

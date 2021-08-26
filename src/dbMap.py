@@ -72,6 +72,8 @@ class DBDot ():
             return "in"
         elif self.color == "#ffffff00":
             return "inPerturber"
+        elif self.color == "#ffff00ff":
+            return "isolatedDB"
         # #ff0000ff is outPerturber color
 
 class Design ():

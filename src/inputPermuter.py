@@ -17,6 +17,7 @@ class Permuter ():
         self.std = []
         self.inPerturber = []
         self.outPerturber = []
+        self.isolatedDB = []
         self.mapPorts()
 
     def mapPorts(self):
@@ -33,6 +34,8 @@ class Permuter ():
                 self.std.append(DBDot)
             elif (portType == "inPerturber"):
                 self.inPerturber.append(DBDot)
+            elif (portType == "isolatedDB"):
+                self.isolatedDB.append(DBDot)
             else:
             # elif (portType == "perturber"):
                 self.outPerturber.append(DBDot)

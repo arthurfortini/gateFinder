@@ -13,7 +13,7 @@ import copy
 # also a src directory containing dbMap.py, inputPermuter.py e randomizer.Py
 # should be present.
 
-# sys.path.append("../../../../gateFinder/src/")    #include source code directory.
+sys.path.append("../../../../gateFinder/src/")    #include source code directory.
 import logger
 import logging
 from pysimanneal import simanneal
@@ -51,6 +51,10 @@ class errorSimulator ():
 
         for i, DBDot in enumerate(editor.outPerturber):
             (n, m, l) = DBDot.latcoord
+            db_pos.append([int(n), int(m), int(l)])
+
+        for i, DBDot in enumerate(editor.isolatedDB):
+            (n, m ,l) = DBDot.latcoord
             db_pos.append([int(n), int(m), int(l)])
 
         for i, DBDot in enumerate(editor.outputs):
@@ -94,6 +98,10 @@ class errorSimulator ():
             (n, m, l) = DBDot.latcoord
             db_pos.append([int(n), int(m), int(l)])
 
+        for i, DBDot in enumerate(editor.isolatedDB):
+            (n, m ,l) = DBDot.latcoord
+            db_pos.append([int(n), int(m), int(l)])
+
         for i, DBDot in enumerate(editor.outputs):
             (n, m, l) = DBDot.latcoord
             db_pos.append([int(n), int(m), int(l)])
@@ -112,8 +120,8 @@ class errorSimulator ():
         return results
 
 
-    def runExhaustiveGS(self):
-        return 1
+    # def runExhaustiveGS(self):
+    #    return 1
 
 
     def runGoldenSim(self, sim_mu, ext_potential_vector=None):
@@ -811,6 +819,66 @@ class errorSimulator ():
         self.logger.info('ErrorAnalysis:    Running Sequential Model Error Insertion Simulation:  FINISHED')
         return resultsBuffer
 
-    def runAssignableModel(self, design, sim_mu, inputNumber, extPotVec, iterations):
+    def systematicAnalysis(self, numError, sim_mu, exPotVec, iterations):
+        # TODO: Support 3 input gates
         resultsBuffer = []
-        return resultsBuffer
+        result_00 = []
+        result_01 = []
+        result_10 = []
+        result_11 = []
+
+        simInstances_num = 15
+        find_output_regex = r"[-+\s][0-1](?=])"
+
+        # ## PERMUTING INPUTS AND SIMULATING MODIFIED DESIGN ## #
+
+        localDesign = Design("Error_" + str(numError) + ".sqd")
+        localEditor = Editor(localDesign)
+        numInputs = len(localEditor.inPerturber)  ## It decides how many inputs are there because i can end up deleting the green dbDot in a inputPair.
+
+        # 2nd inputperturber data
+        input2_id = localEditor.inPerturber[1].layer_id
+        input2_latcoord = localEditor.inPerturber[1].latcoord
+        input2_physloc = localEditor.inPerturber[1].physloc
+        input2_color = localEditor.inPerturber[1].color
+
+        if (numInputs == 2):
+            counter = 0
+            for i in range(4):
+                if (counter == 1):
+                    localDesign.removeDBDot(localEditor.inPerturber[1].dbAttribs)
+                elif (counter == 2):
+                    localDesign.removeDBDot(localEditor.inPerturber[0].dbAttribs)
+                    localDesign.addDBDot(input2_id, input2_latcoord, input2_physloc, input2_color)
+                elif (counter == 3):
+                    localDesign.removeDBDot(localEditor.inPerturber[1].dbAttribs)
+
+                localDesign.overwriteDBDots()
+                for iteration in range(iterations):
+                    results = self.runSimAnneal(localDesign, sim_mu, simInstances_num, exPotVec)
+                    if results:
+                        outputStr = str(results[0])
+                        outputRes = re.search(find_output_regex, outputStr).group(0)
+                        resultsBuffer.append(outputRes)
+                    else:
+                        resultsBuffer.append("NaN")
+
+                if (counter == 0):
+                    result_11 = resultsBuffer
+                elif (counter == 1):
+                    result_10 = resultsBuffer
+                elif (counter == 2):
+                    result_01 = resultsBuffer
+                elif (counter == 3):
+                    result_00 = resultsBuffer
+
+                counter = counter + 1
+                resultsBuffer = []
+        else:
+            self.logger.error('ErrorSim:    sistematicAnalysis: number of inputs unsupported.')
+
+        return result_00, result_01, result_10, result_11
+
+    # def runAssignableModel(self, design, sim_mu, inputNumber, extPotVec, iterations):
+    #     resultsBuffer = []
+    #     return resultsBuffer

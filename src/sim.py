@@ -99,6 +99,10 @@ def sim(design, design_name, number_of_inputs, sim_mu, ext_potential_vector):
             (n, m, l) = DBDot.latcoord
             db_pos.append([int(n), int(m), int(l)])
 
+        for i, DBDot in enumerate(editor.isolatedDB):
+            (n, m ,l) = DBDot.latcoord
+            db_pos.append([int(n), int(m), int(l)])
+
         for i, DBDot in enumerate(editor.outputs):
             (n, m, l) = DBDot.latcoord
             db_pos.append([int(n), int(m), int(l)])
